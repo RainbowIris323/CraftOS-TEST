@@ -14,13 +14,13 @@ end
 
 -- downloads or updates a file to the computer
 local downloadFile = function (path, url)
-    local status = "downloaded"
     if (fs.exists(path)) then
         fs.delete(path)
-        status = "updated"
     end
     local file = fs.open(path, "w")
     writeToTerminal("installing file: " .. path .. " from url: " .. url, colors.red)
+    print(http.get(url))
+    sleep(5)
     file.write(http.get(url).readALL())
     file.close()
 end
