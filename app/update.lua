@@ -15,7 +15,7 @@ end
 local checkVersion = function (path, URL)
     if (fs.exists(path)) then
         local file = fs.open(path, "r")
-        local data = file.read()
+        local data = file.readAll()
         file.close()
         if (data == http.get(URL).readAll()) then
             return
