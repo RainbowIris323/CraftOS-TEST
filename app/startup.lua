@@ -1,7 +1,15 @@
-local PrimeUI = require("/lib/PrimeUI")
-local files = require("/lib/files")
+if (fs.exists(path)) then
+    local file = fs.open(path, "r")
+    local data = file.read()
+    file.close()
+    if (data ~= http.get(URL).readAll()) then
+        error("The updater has been updated please reinstall")
+        return
+    end
+else
+    error("The updater is missing please reinstall")
+    return
+end
 
-PrimeUI.clear()
-PrimeUI.label(term.current(), 3, 5, files.readJson("/config/installs.json"))
-PrimeUI.borderBox(term.current(), 4, 7, 40, 1)
-PrimeUI.run()
+shell.run("update run")
+shell.run("main run")
