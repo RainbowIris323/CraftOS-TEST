@@ -13,13 +13,13 @@ local writeToTerminal = function (text, textColor)
 end
 
 -- downloads or updates a file to the computer
-local downloadFile = function (path, url)
+local downloadFile = function (path, u)
     if (fs.exists(path)) then
         fs.delete(path)
     end
     local file = fs.open(path, "w")
-    writeToTerminal("installing file: " .. path .. " from url: " .. url, colors.lime)
-    local data = http.get(url)
+    writeToTerminal("installing file: " .. path .. " from url: " .. u, colors.lime)
+    local data = http.get(u)
     file.write(data.readAll())
     file.close()
 end
