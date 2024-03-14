@@ -1,4 +1,4 @@
-os.loadAPI("/lib/json")
+require("/lib/json")
 
 local files = {}
 
