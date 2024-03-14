@@ -18,14 +18,14 @@ local downloadFile = function (path, url)
         fs.delete(path)
     end
     local file = fs.open(path, "w")
-    writeToTerminal("installing file: " .. path .. " from url: " .. url, colors.red)
-    print(http.get(url))
+    writeToTerminal("installing file: " .. path .. " from url: " .. url, colors.lime)
+    print(table.unpack(http.get(url)))
     sleep(5)
     file.write(http.get(url).readALL())
     file.close()
 end
 
-writeToTerminal("Installing RaynboOS base runtime", colors.lime)
+writeToTerminal("Installing RaynboOS base runtime", colors.green)
 
 -- core code
 downloadFile("startup.lua", joinURL("app/startup.lua"))
@@ -39,7 +39,7 @@ downloadFile("lib/json.lua", joinURL("app/lib/json.lua"))
 -- core configs
 downloadFile("config/installs.json", joinURL("app/config/installs.json"))
 
-writeToTerminal("RaynboOS base runtime runtime installed", colors.lime)
+writeToTerminal("RaynboOS base runtime runtime installed", colors.green)
 
 sleep(0.5)
 
