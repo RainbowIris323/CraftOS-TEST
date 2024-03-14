@@ -35,27 +35,27 @@ function files.modifyJson (path, callback)
     return content
 end
 
-function files.downloadFile (path, url)
+function files.downloadFile (path, URL)
     local file = fs.open(path, "w")
-    file.write(http.get(url).readALL())
+    file.write(http.get(URL).readALL())
     file.close()
 end
 
-function files.ensureFile (path, url)
+function files.ensureFile (path, URL)
     if (fs.exists(path) == false) then
-        downloadFile(path, url)
+        downloadFile(path, URL)
         return "downloaded"
     end
     return "allready exists"
 end
 
-function files.syncFile (path, url)
-    if (read(path) == http.get(url).readALL()) then return "not changed (file is up to date)" end
+function files.syncFile (path, URL)
+    if (read(path) == http.get(URL).readALL()) then return "not changed (file is up to date)" end
     if (fs.exists(path) == false) then 
-        downloadFile(path, url)
+        downloadFile(path, URL)
         return "downloaded"
     end
-    downloadFile(path, url)
+    downloadFile(path, URL)
     return "updated"
 end
 

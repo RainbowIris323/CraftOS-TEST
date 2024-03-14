@@ -13,14 +13,13 @@ local writeToTerminal = function (text, textColor)
 end
 
 -- downloads or updates a file to the computer
-local downloadFile = function (path, u)
+local downloadFile = function (path, URL)
     if (fs.exists(path)) then
         fs.delete(path)
     end
     local file = fs.open(path, "w")
-    writeToTerminal("installing file: " .. path .. " from url: " .. u, colors.lime)
-    local data = http.get(u)
-    file.write(data.readAll())
+    writeToTerminal("installing file: " .. path .. " from url: " .. URL, colors.lime)
+    file.write(http.get(URL).readAll())
     file.close()
 end
 
@@ -28,7 +27,6 @@ writeToTerminal("Installing RaynboOS base runtime", colors.green)
 
 -- core code
 downloadFile("startup.lua", joinURL("app/startup.lua"))
-downloadFile("install-module.lua", joinURL("app/install-module.lua"))
 
 -- core libs
 downloadFile("lib/PrimeUI.lua", joinURL("app/lib/PrimeUI.lua"))
