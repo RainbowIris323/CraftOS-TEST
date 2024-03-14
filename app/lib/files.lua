@@ -1,8 +1,8 @@
-local json = require("/lib/json")
+os.loadAPI("/lib/json")
 
 local files = {}
 
-function files.read (path) 
+function files.read (path)
     local file = fs.open(path, 'r')
     local content = file.readAll()
     file.close()
@@ -24,13 +24,13 @@ function files.modify (path, callback)
 end
 
 function files.readJson (path)
-    return json.decode(read(path))
+    return decode(read(path))
 end
 
 function files.modifyJson (path, callback)
     local content = callback(readJson(path))
     local file = fs.open(path, 'w')
-    file.write(content)
+    file.write(encode(content))
     file.close()
     return content
 end
