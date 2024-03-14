@@ -42,7 +42,7 @@ function files.downloadFile (path, url)
 end
 
 function files.ensureFile (path, url)
-    if (!fs.exists(path)) then
+    if (fs.exists(path) == false) then
         downloadFile(path, url)
         return "downloaded"
     end
@@ -51,7 +51,7 @@ end
 
 function files.syncFile (path, url)
     if (read(path) == http.get(url).readALL()) then return "not changed (file is up to date)" end
-    if (!fs.exists(path)) then 
+    if (fs.exists(path) == false) then 
         downloadFile(path, url)
         return "downloaded"
     end
