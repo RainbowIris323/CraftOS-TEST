@@ -6,6 +6,7 @@ end
 
 -- writes text to the terminal with a given color
 local writeToTerminal = function (text, textColor)
+    if (textColor == null) then textColor = colors.white end
     term.setTextColor(textColor)
     print(text)
     term.setTextColor(colors.white)
