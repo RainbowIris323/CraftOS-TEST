@@ -3,11 +3,10 @@ local files = require("/lib/files")
 
 local screen = {}
 
-local termWidth, termHeight = term.getSize()
-
 screen.draw = function ()
     PrimeUI.clear()
-
+    local termWidth, termHeight = term.getSize()
+    
     -- Background
     PrimeUI.borderBox(term.current(), 0, 0, termWidth, termHeight, colors.gray, colors.lightGray)
 
