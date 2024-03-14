@@ -1,6 +1,3 @@
-local PrimeUI = require("/lib/PrimeUI")
-local files = require("/lib/files")
+local screen = require("/lib/screen")
 
-PrimeUI.clear()
-PrimeUI.label(term.current(), 3, 5, "Hello!", colors.lime, colors.gray)
-PrimeUI.run()
+screen.draw()

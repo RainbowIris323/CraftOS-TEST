@@ -27,16 +27,7 @@ writeToTerminal("Installing RaynboOS base runtime", colors.green)
 
 -- core code
 downloadFile("startup.lua", joinURL("app/startup.lua"))
-downloadFile("main.lua", joinURL("app/main.lua"))
 downloadFile("update.lua", joinURL("app/update.lua"))
-
--- core libs
-downloadFile("lib/PrimeUI.lua", joinURL("app/lib/PrimeUI.lua"))
-downloadFile("lib/files.lua", joinURL("app/lib/files.lua"))
-downloadFile("lib/json.lua", joinURL("app/lib/json.lua"))
-
--- core configs
-downloadFile("config/installs.json", joinURL("app/config/installs.json"))
 
 writeToTerminal("RaynboOS base runtime runtime installed", colors.green)
 

@@ -38,6 +38,7 @@ checkVersion("main.lua", joinURL("app/main.lua"))
 checkVersion("lib/PrimeUI.lua", joinURL("app/lib/PrimeUI.lua"))
 checkVersion("lib/files.lua", joinURL("app/lib/files.lua"))
 checkVersion("lib/json.lua", joinURL("app/lib/json.lua"))
+checkVersion("lib/screen.lua", joinURL("app/lib/screen.lua"))
 
 writeToTerminal("RaynboOS base runtime has been updated", colors.green)
 
