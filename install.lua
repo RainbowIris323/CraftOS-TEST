@@ -1,4 +1,4 @@
-local baseRepoURL = "http://raw.githubusercontent.com/" -- update url!
+local baseRepoURL = "https://raw.githubusercontent.com/RainbowIris323/CraftOS-TEST/main/" -- update url!
 
 local joinURL = function (path) 
     return baseRepoURL .. path
@@ -33,7 +33,7 @@ downloadFile("startup.lua", joinURL("app/startup.lua"))
 downloadFile("install-module.lua", joinURL("app/install-module.lua"))
 
 -- core libs
-downloadFile("lib/display.lua", joinURL("app/lib/display.lua"))
+downloadFile("lib/PrimeUI.lua", joinURL("app/lib/PrimeUI.lua"))
 downloadFile("lib/files.lua", joinURL("app/lib/files.lua"))
 downloadFile("lib/json.lua", joinURL("app/lib/json.lua"))
 
