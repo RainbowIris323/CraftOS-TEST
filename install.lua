@@ -19,11 +19,8 @@ local downloadFile = function (path, url)
     end
     local file = fs.open(path, "w")
     writeToTerminal("installing file: " .. path .. " from url: " .. url, colors.lime)
-    for i, v in pairs(table.unpack(http.get(url))) do
-        print(i .. " | " .. v)
-    end
-    sleep(5)
-    file.write(http.get(url).readALL())
+    local data = http.get(url)
+    file.write(data.readAll())
     file.close()
 end
 
