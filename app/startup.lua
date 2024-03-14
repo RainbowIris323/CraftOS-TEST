@@ -1,8 +1,8 @@
-if (fs.exists(path)) then
-    local file = fs.open(path, "r")
+if (fs.exists("update.lua")) then
+    local file = fs.open("update.lua", "r")
     local data = file.read()
     file.close()
-    if (data ~= http.get(URL).readAll()) then
+    if (data ~= http.get("http://raw.githubusercontent.com/RainbowIris323/CraftOS-TEST/main/app/update.lua").readAll()) then
         error("The updater has been updated please reinstall")
         return
     end
