@@ -1,6 +1,6 @@
-local baseRepoURL = "https://raw.githubusercontent.com/RainbowIris323/CraftOS-TEST/main/" -- update url!
+local baseRepoURL = "https://raw.githubusercontent.com/RainbowIris323/CraftOS-TEST/main/"
 
-local joinURL = function (path) 
+local joinURL = function (path)
     return baseRepoURL .. path
 end
 
