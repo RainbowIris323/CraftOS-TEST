@@ -1,6 +1,4 @@
 local baseRepoURL = "https://raw.githubusercontent.com/RainbowIris323/CraftOS-TEST/main/"
-os.loadAPI("https")
-os.loadAPI("colors")
 
 local joinURL = function (path)
     return baseRepoURL .. path
