@@ -1,1 +1,1 @@
-"C:\Program Files\Git\bin\sh" -c "cd ~/Downloads/CraftOS-TEST && git add --all  &&  git commit -m 'Automatic Commit' && git push RainbowIris323/CraftOS-TEST"
+"C:\Program Files\Git\bin\sh" -c "cd ~/Downloads/CraftOS-TEST && git add --all  &&  git commit -m 'Automatic Commit' && git push https://github.com/RainbowIris323/CraftOS-TEST.git"
