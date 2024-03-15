@@ -18,4 +18,3 @@ screen.draw = function ()
 end
 
 return screen
-
