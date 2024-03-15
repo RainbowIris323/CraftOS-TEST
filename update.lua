@@ -32,13 +32,13 @@ end
 writeToTerminal("Updaing RaynboOS base runtime", colors.green)
 
 -- core code
-checkVersion("main.lua", joinURL("app/main.lua"))
+checkVersion("main.lua", joinURL("main.lua"))
 
 -- core libs
-checkVersion("lib/PrimeUI.lua", joinURL("app/lib/PrimeUI.lua"))
-checkVersion("lib/files.lua", joinURL("app/lib/files.lua"))
-checkVersion("lib/json.lua", joinURL("app/lib/json.lua"))
-checkVersion("lib/screen.lua", joinURL("app/lib/screen.lua"))
+checkVersion("lib/PrimeUI.lua", joinURL("lib/PrimeUI.lua"))
+checkVersion("lib/files.lua", joinURL("lib/files.lua"))
+checkVersion("lib/json.lua", joinURL("lib/json.lua"))
+checkVersion("lib/screen.lua", joinURL("lib/screen.lua"))
 
 writeToTerminal("RaynboOS base runtime has been updated", colors.green)
 

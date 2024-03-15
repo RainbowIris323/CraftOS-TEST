@@ -26,8 +26,8 @@ end
 writeToTerminal("Installing RaynboOS base runtime", colors.green)
 
 -- core code
-downloadFile("startup.lua", joinURL("app/startup.lua"))
-downloadFile("update.lua", joinURL("app/update.lua"))
+downloadFile("startup.lua", joinURL("startup.lua"))
+downloadFile("update.lua", joinURL("update.lua"))
 
 writeToTerminal("RaynboOS base runtime runtime installed", colors.green)
 
