@@ -6,8 +6,6 @@ local screen = {}
 screen.draw = function ()
     PrimeUI.clear()
     local termWidth, termHeight = term.getSize()
-
-    PrimeUI.textBox(term.current(), 1, math.floor(termHeight / 20) + 1, termWidth - 1, math.floor(termHeight / 10) - 1, "RaynboOS v" .. files.readJson("/config/installs.json").base, colors.lime)
     
     -- Background
     PrimeUI.borderBox(term.current(), 1, 1, termWidth - 1, termHeight - 1, colors.gray, colors.lightGray)
