@@ -1,5 +1,4 @@
 local PrimeUI = require("/lib/PrimeUI")
-local files = require("/lib/files")
 
 local screen = {}
 
